@@ -1,4 +1,4 @@
-let paintingImg = []
+let paintingImg = [];
 let frame;
 let phase = 'cover;'
 let myFont;
@@ -21,9 +21,9 @@ let opportunities = ['ending with a new friend', 'ending with a new found skill'
 
 function preload() {
   for (i = 0; i <= 20; i++) {
-    renaissanceImg[i] = loadImage('needs/' + [i] + '.jpg');
+    paintingImg[i] = loadImage('needs/' + [i] + '.jpg');
   }
-  frame = loadImage('needs/frame2.jpg');
+  frame = loadImage('needs/');
   myFont = loadFont('needs/fonts/PlayfairDisplay-Regular.ttf');
 }
 
@@ -107,7 +107,7 @@ function windowResized() {
   resizeCanvas(windowWidth * 0.5, (windowWidth * 0.5) * 1.25);
   if (phase == 'cover') {
     coverDisplay();
-  } else if (phase == 'playing') {
+  } else if (phase == 'operating') {
     divImage();
     divText();
   }
