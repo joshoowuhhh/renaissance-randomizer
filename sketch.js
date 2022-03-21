@@ -33,7 +33,8 @@ function setup() {
   let button = createButton('Click here to see what your day will consist of.');
   button.parent('button-holder');
   button.mousePressed(divination);
-  console.log(paints);
+console.log(yourDay[int(random(yourDay.length))]);
+ console.log(opportunities.length);
   frameRate(30);
   imageMode(CENTER);
   textAlign(CENTER);
@@ -51,12 +52,8 @@ function divination() {
   yD = int(random(yourDay.length));
   aP = int(random(aspect.length));
   oP = int(random(opportunities.length));
-     //fort = int(random(fortunes.length));
-  //fort2 = int(random(fortunes2.length));
-  //fort3 = int(random(fortunes3.length));
+  text("Your day will consist of", width * 0.5, height * 0.26);
    wrds1 = yourDay[yD] + " " + aspect[aP] + " " + opportunities[oP] + ".";
-    // wrds2 = 'Aspects of your day will ' + leaves[leaf] + ' ' + fortunes2[fort2];
-  //wrds3 = 'New opprotunities such as ' + flowers[flow] + ' ' + fortunes3[fort3];
   console.log(wrds1);
  // console.log(wrds2);
   divImage();
@@ -64,26 +61,22 @@ function divination() {
 }
 
   function coverDisplay() {
-  image(frame, width * 0.5, height * 0.5, width, height);
+  //image(frame, width * 0.5, height * 0.5, width, height);
   textSize(coverSize);
   text('Press the button below', width * 0.5, height * 0.4);
-  text('to see what your day holds before you.', width * 0.5, height * 0.5);
+  text('to see how your day will go.', width * 0.5, height * 0.5);
   }
 
 function divImage() {
   //background(255);
-  image(frame, width * 0.5, height * 0.5, width, height);
-  image(renaissanceImg[img], width * 0.5, height * 0.4, width * 0.2812, width * 0.5);
+  //image(frame, width * 0.5, height * 0.5, width, height);
+  image(renaissanceImg[img], width * 0.5, height * 0.5, width * 0.8, width * 1.0);
 }
 
 function divText() {
-  textSize(studySize);
-  text('Study the plant:', width / 2, height * 0.625);
   textSize(listSize);
-  text(wrds1, width / 2, height * 0.675);
-//  text(wrds2, width / 2, height * 0.7);
+  text(wrds1, width / 2, height * 0.95);
   textSize(retrySize);
-  text('If the plant matches none of these, try again.', width / 2, height * 0.8);
 }
 
 function textResize() {
