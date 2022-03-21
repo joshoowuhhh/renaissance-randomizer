@@ -53,7 +53,7 @@ function divination() {
   aP = int(random(aspect.length));
   oP = int(random(opportunities.length));
   text("Your day will consist of", width * 0.5, height * 0.26);
-   wrds1 = yourDay[yD] + " " + aspect[aP] + " " + opportunities[oP] + ".";
+   wrds1 = "Your day will consist of " + yourDay[yD] + " " + aspect[aP] + " " + opportunities[oP] + ".";
   console.log(wrds1);
  // console.log(wrds2);
   divImage();
