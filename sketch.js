@@ -24,7 +24,7 @@ function preload() {
   renaissanceImg[i] = loadImage('assets/' + i + '.jpg');
   }
   //frame = loadImage('needs/');
-  myFont = loadFont('needs/fonts/PlayfairDisplay-Regular.ttf');
+  myFont = loadFont('assets/fonts/PlayfairDisplay-Regular.ttf');
 }
 
 function setup() {
