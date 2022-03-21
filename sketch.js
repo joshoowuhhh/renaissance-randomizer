@@ -1,4 +1,4 @@
-let renaissanceImg = []
+let paintingImg = []
 let frame;
 let phase = 'cover;'
 let myFont;
@@ -37,7 +37,7 @@ function setup() {
   imageMode(CENTER);
   textAlign(CENTER);
 }
-  
+
 function divination() {
   phase = 'operating';
   img = int(random(renaissanceImg.length));
@@ -55,7 +55,7 @@ function divination() {
   divImage();
   divText();
 }
-  
+
   function coverDisplay() {
   image(frame, width * 0.5, height * 0.5, width, height);
   textSize(coverSize);
@@ -101,8 +101,8 @@ function textResize() {
     listSize = 10;
     retrySize = 9;
   }
-}  
-  
+}
+
 function windowResized() {
   resizeCanvas(windowWidth * 0.5, (windowWidth * 0.5) * 1.25);
   if (phase == 'cover') {
@@ -113,4 +113,3 @@ function windowResized() {
   }
   textResize();
 }
-  
