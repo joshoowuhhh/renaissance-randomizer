@@ -1,4 +1,4 @@
-let paintingImg = [];
+let renaissanceImg = [];
 let frame;
 let phase = 'cover;'
 let myFont;
@@ -20,10 +20,10 @@ let aspect = ['along with smiles,', 'along with hugs,', 'along with laughs,', 'a
 let opportunities = ['ending with a new friend', 'ending with a new found skill', 'ending with a new sense of determination', 'ending with a new sense of life', 'ending with a new favorite hobby', 'ending with a new sense of worth', 'ending with shame', 'ending with being content', 'ending with being in love', 'ending with being alone','ending with finding your true self'];
 
 function preload() {
-  for (i = 0; i <= 20; i++) {
-    paintingImg[i] = loadImage('needs/' + [i] + '.jpg');
+  for (i = 0; i <= 7; i++) {
+  renaissanceImg[i] = loadImage('assets/' + i + '.jpg');
   }
-  frame = loadImage('needs/');
+  //frame = loadImage('needs/');
   myFont = loadFont('needs/fonts/PlayfairDisplay-Regular.ttf');
 }
 
@@ -33,21 +33,28 @@ function setup() {
   let button = createButton('Click here to see what your day will consist of.');
   button.parent('button-holder');
   button.mousePressed(divination);
+  console.log(paints);
   frameRate(30);
   imageMode(CENTER);
   textAlign(CENTER);
+  textFont(myFont);
+  textSize(20);
+  textResize();
+  coverDisplay();
 }
+
+function draw() {}
 
 function divination() {
   phase = 'operating';
   img = int(random(renaissanceImg.length));
-    yD = int(random(yourDay.length));
-  aspect = int(random(aspect.length));
-  oP = int(random(opprotunities.length));
+  yD = int(random(yourDay.length));
+  aP = int(random(aspect.length));
+  oP = int(random(opportunities.length));
      //fort = int(random(fortunes.length));
   //fort2 = int(random(fortunes2.length));
   //fort3 = int(random(fortunes3.length));
-  wrds1 = 'Your day will ' + yourDay[yD] + ' ' + fortunes[fort];
+   wrds1 = yourDay[yD] + " " + aspect[aP] + " " + opportunities[oP] + ".";
     // wrds2 = 'Aspects of your day will ' + leaves[leaf] + ' ' + fortunes2[fort2];
   //wrds3 = 'New opprotunities such as ' + flowers[flow] + ' ' + fortunes3[fort3];
   console.log(wrds1);
@@ -74,7 +81,7 @@ function divText() {
   text('Study the plant:', width / 2, height * 0.625);
   textSize(listSize);
   text(wrds1, width / 2, height * 0.675);
-  text(wrds2, width / 2, height * 0.7);
+//  text(wrds2, width / 2, height * 0.7);
   textSize(retrySize);
   text('If the plant matches none of these, try again.', width / 2, height * 0.8);
 }
