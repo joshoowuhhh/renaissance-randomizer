@@ -21,7 +21,7 @@ let opportunities = ['ending with a new friend', 'ending with a new found skill'
 
 function preload() {
   for (i = 0; i <= 7; i++) {
-  renaissanceImg[i] = loadImage('assets/' + i + '.jpg');
+  renaissanceImg[i] = loadImage('paints_/' + i + '.jpg');
   }
   //frame = loadImage('needs/');
   myFont = loadFont('assets/fonts/PlayfairDisplay-Regular.ttf');
